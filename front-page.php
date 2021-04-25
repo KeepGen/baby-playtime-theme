@@ -21,15 +21,24 @@
 
 <div class="video-section">
    <div class="container">
-      <div class="video-section-text">
-         <h2 class="video-section-title">Make Tummy TimeGreat</h2>
-         <p class="video-section-description">We want to see your new arrival smiling from the moment they meet their new marine friends, so why not treat them to a toy they'll treasure for a lifetime?</p>
-         <img src="#" class="decor-video video-section-decor">
-      </div><!-- /.video-section-text -->
+      <div class="video-section-wrapper">
+         <div class="video-section-text">
+            <h2 class="video-section-title"><?php the_field('video_title') ?></h2>
+            <p class="video-section-description"><?php the_field('video_text') ?></p>
+            <?php 
+            $image = get_field('video_decor');
+            if( !empty( $image ) ): ?>
+               <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="decor-video video-section-decor" />
+            <?php endif; ?>
+         </div><!-- /.video-section-text -->
 
-      <div class="video-section-video">
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/sszGhk8YYZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div><!-- /.video-section-video -->
+         <div class="video-section-video">
+            <?php the_field('video_url') ?>
+         </div><!-- /.video-section-video -->
+
+         <!-- <img src="<?php echo get_template_directory_uri() . '/assets/images/leaves.png'?>" alt="Leaves decoration" class="video-section-leaves-img"> -->
+
+      </div><!-- /.video-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.video-section -->
 

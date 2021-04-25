@@ -21,7 +21,7 @@
 
 body {
   font-family: 'Quicksand-Regular', Arial, sans-serif;
-  font-size: 12px;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -145,4 +145,45 @@ body {
 
 .button {
   margin-left: 220px;
+}
+
+.video-section {
+  position: relative;
+  padding-top: 85px;
+  padding-bottom: 177px;
+  background: #ffffff url("../images/leaves.png") no-repeat fixed;
+  background-position: 50% 116%;
+}
+
+.video-section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video-section-text {
+  width: 615px;
+}
+
+.video-section-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-family: 'Quicksand-Medium', Arial, sans;
+  font-size: 45px;
+  color: #21a2ca;
+}
+
+.video-section-description {
+  line-height: 1.8;
+  margin: 0;
+  margin-bottom: 55px;
+}
+
+.video-section-leaves-img {
+  position: absolute;
+  bottom: 0;
 }

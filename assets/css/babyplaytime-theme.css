@@ -92,6 +92,7 @@ body {
   text-shadow: 1px 1px 0px #914c0d;
   border: 1px solid #eb701f;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -143,7 +144,7 @@ body {
   z-index: -1;
 }
 
-.button {
+.button-hero {
   margin-left: 220px;
 }
 
@@ -263,4 +264,56 @@ body {
   margin-right: 10px;
   min-width: 25px;
   height: 20px;
+}
+
+.gift-section {
+  position: relative;
+  padding-top: 85px;
+  padding-bottom: 177px;
+  background: #ffffff url("../images/leaves.png") no-repeat;
+  background-position: 50% 140%;
+}
+
+.gift-section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gift-section-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-family: 'Quicksand-Medium', Arial, sans;
+  font-size: 45px;
+  color: #21a2ca;
+}
+
+.gift-section-description {
+  line-height: 1.8;
+  margin: 0;
+  width: 560px;
+  margin-bottom: 5px;
+}
+
+.gift-section-decor {
+  display: block;
+  margin: auto;
+  margin-bottom: 45px;
+}
+
+.gift-section-image {
+  width: 600px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.button-gift {
+  display: block;
+  margin: auto;
 }

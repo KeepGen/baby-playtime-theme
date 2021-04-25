@@ -6,7 +6,7 @@
          <div class="hero-main-texts">
             <h1 class="hero-title"><?php the_field('main_title') ?></h1>
             <span class="hero-description"><?php the_field('main_text') ?></span>
-            <button class="button button-buy-amazon"><?php the_field('main_button_text') ?></button>
+            <button class="button button-hero"><?php the_field('main_button_text') ?></button>
          </div>
 
          <?php 
@@ -100,6 +100,31 @@
       </div><!-- /.benefits-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.benefits-section -->
+
+<div class="gift-section">
+   <div class="container">
+      <div class="gift-section-wrapper">
+         <div class="gift-section-text">
+            <h2 class="gift-section-title"><?php the_field('gift_title') ?></h2>
+            <p class="gift-section-description"><?php the_field('gift_text') ?></p>
+            <?php 
+            $image = get_field('gift_decor');
+            if( !empty( $image ) ): ?>
+               <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="decor-gift gift-section-decor" />
+            <?php endif; ?>
+            <button class="button button-gift"><?php the_field('gift_button_text') ?></button>
+         </div><!-- /.gift-section-text -->
+
+         <?php 
+            $image = get_field('gift_image');
+            if( !empty( $image ) ): ?>
+               <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="decor-gift gift-section-image" />
+         <?php endif; ?>
+
+      </div><!-- /.gift-section-wrapper -->
+   </div><!-- /.container -->
+</div><!-- /.gift-section -->
+
 
 
 <?php get_footer(); ?>

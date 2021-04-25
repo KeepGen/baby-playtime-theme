@@ -125,6 +125,45 @@
    </div><!-- /.container -->
 </div><!-- /.gift-section -->
 
+<div class="review-section">
+   <div class="container">
+      <div class="review-section-wrapper">
+         <h2 class="review-section-title"><?php the_field('review_title') ?></h2>
+         <div class="review-section-best">
+            <div class="review-section-best-wrapper">
+               <span class="review-section-name">Sarah</span>
+               <div class="review-section-best-item">
+                  <img src="STARS" alt="Stars" class="review-section-best-item-stars">
+                  <h3 class="review-section-best-item-title">Tons of fun for my baby</h3>
+                  <p class="review-section-best-item-text">Lovely mat. My baby has tons of fun playing with it. I wasn't expecting much for the price I paid, but after my baby playing with it almost everyday I have no regrets. I will buy couple more, just in case, since the price is so good. It would be also a perfect gift. Packed well enough to use as a gift. I just wonder why didn't they seal the box though.</p>
+               </div><!-- /.review-section-best-item -->
+            </div><!-- /.review-section-best-wrapper -->
 
+            <div class="review-section-best-wrapper">
+               <span class="review-section-name">Sarah</span>
+               <div class="review-section-best-item">
+                  <img src="STARS" alt="Stars" class="review-section-best-item-stars">
+                  <h3 class="review-section-best-item-title">Tons of fun for my baby</h3>
+                  <p class="review-section-best-item-text">Lovely mat. My baby has tons of fun playing with it. I wasn't expecting much for the price I paid, but after my baby playing with it almost everyday I have no regrets. I will buy couple more, just in case, since the price is so good. It would be also a perfect gift. Packed well enough to use as a gift. I just wonder why didn't they seal the box though.</p>
+               </div><!-- /.review-section-best-item -->
+            </div><!-- /.review-section-best-wrapper -->
+
+            <div class="review-section-best-wrapper">
+               <span class="review-section-name">Sarah</span>
+               <div class="review-section-best-item">
+                  <img src="STARS" alt="Stars" class="review-section-best-item-stars">
+                  <h3 class="review-section-best-item-title">Tons of fun for my baby</h3>
+                  <p class="review-section-best-item-text">Lovely mat. My baby has tons of fun playing with it. I wasn't expecting much for the price I paid, but after my baby playing with it almost everyday I have no regrets. I will buy couple more, just in case, since the price is so good. It would be also a perfect gift. Packed well enough to use as a gift. I just wonder why didn't they seal the box though.</p>
+               </div><!-- /.review-section-best-item -->
+            </div><!-- /.review-section-best-wrapper -->
+
+         </div><!-- /.review-section-text -->
+
+         <a href="#" class="review-section-readmore">View all revievs</a>
+         <!-- /.review-section-readmore -->
+
+      </div><!-- /.review-section-wrapper -->
+   </div><!-- /.container -->
+</div><!-- /.review-section -->
 
 <?php get_footer(); ?>

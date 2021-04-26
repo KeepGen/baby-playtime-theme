@@ -161,11 +161,35 @@
 
          </div><!-- /.review-section-text -->
 
-         <a href="#" class="review-section-readmore">View all revievs</a>
+         <a href="#" class="review-section-readmore">View all reviews</a>
          <!-- /.review-section-readmore -->
 
       </div><!-- /.review-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.review-section -->
+
+<div class="questions-section">
+   <div class="container">
+      <div class="questions-section-wrapper">
+         <h2 class="questions-section-title"><?php the_field('questions_title', 15); ?></h2>
+         <div class="accordion-header"><?php the_field('question_1', 15); ?></div>
+         <div class="accordion-body"><?php the_field('answer_1', 15); ?></div>
+         
+         <div class="accordion-header"><?php the_field('question_2', 15); ?></div>
+         <div class="accordion-body"><?php the_field('answer_2', 15); ?></div>
+         
+         <div class="accordion-header"><?php the_field('question_3', 15); ?></div>
+         <div class="accordion-body"><?php the_field('answer_3', 15); ?></div>
+         
+         <div class="accordion-header"><?php the_field('question_4', 15); ?></div>
+         <div class="accordion-body"><?php the_field('answer_4', 15); ?></div>
+
+         <div class="accordion-header"><?php the_field('question_5', 15); ?></div>
+         <div class="accordion-body"><?php the_field('answer_5', 15); ?></div>
+      </div><!-- /.questions-section-wrapper -->
+   </div><!-- /.container -->
+</div><!-- /.questions-section -->
+
+
 
 <?php get_footer(); ?>

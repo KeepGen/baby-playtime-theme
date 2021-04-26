@@ -1,0 +1,57 @@
+.questions-section
+   background-color: #f1f6fa
+   padding: 70px 0 80px 0
+   &-title
+      font-family: 'Quicksand-Medium', Arial, sans
+      font-size: 45px
+      margin: 0
+      margin-bottom: 20px
+
+.accordion
+   width: 100%
+   list-style: none
+   padding-left: 0
+   border-radius: 10px
+   overflow: hidden
+   position: relative
+   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
+
+.accordion-header
+   position: relative
+   font-family: 'Quicksand-Bold', Arial, sans
+   background: #f1f6fb
+   padding: 14px 20px 14px 60px
+   cursor: pointer
+
+.accordion-header:after
+   content: ""
+   position: absolute
+   top: 32px
+   transform: translateY(-50%)
+   left: 20px
+   width: 15px
+   height: 15px
+   background: url("../images/arrow.svg") no-repeat
+   transition: transform 0.5s
+   z-index: 2
+
+.accordion-header.active:after
+   top: 52%
+   left: 20px
+   transform: translateY(-50%) rotate(0.25turn)
+
+.accordion-header:before
+   content: ""
+   position: absolute
+   top: 16px
+   left: 11px
+   width: 33px
+   height: 33px
+   background: url("../images/bg-cyrcle.svg") no-repeat
+   z-index: 1
+
+.accordion-body
+   display: none
+   color: #747474
+   font-size: 21px
+   padding: 0 20px 14px 60px

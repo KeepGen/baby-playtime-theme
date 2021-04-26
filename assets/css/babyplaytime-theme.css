@@ -393,6 +393,10 @@ body {
   text-decoration: underline;
 }
 
+.review-section-readmore:visited {
+  color: #fff;
+}
+
 .questions-section {
   background-color: #f1f6fa;
   padding: 70px 0 80px 0;

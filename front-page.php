@@ -130,32 +130,34 @@
       <div class="review-section-wrapper">
          <h2 class="review-section-title"><?php the_field('review_title') ?></h2>
          <div class="review-section-best">
-            <div class="review-section-best-wrapper">
-               <span class="review-section-name">Sarah</span>
-               <div class="review-section-best-item">
-                  <img src="STARS" alt="Stars" class="review-section-best-item-stars">
-                  <h3 class="review-section-best-item-title">Tons of fun for my baby</h3>
-                  <p class="review-section-best-item-text">Lovely mat. My baby has tons of fun playing with it. I wasn't expecting much for the price I paid, but after my baby playing with it almost everyday I have no regrets. I will buy couple more, just in case, since the price is so good. It would be also a perfect gift. Packed well enough to use as a gift. I just wonder why didn't they seal the box though.</p>
-               </div><!-- /.review-section-best-item -->
-            </div><!-- /.review-section-best-wrapper -->
+            <?php
+            $args = array(
+               'posts_per_page' => 3,
+               'orderby'   => 'rand',
+               'post_type' => 'review',
+            );
+            $products = new WP_Query( $args );
+            if( $products->have_posts() ) {
+               while( $products->have_posts() ) {
+               $products->the_post();
+            ?>
+               <div class="review-section-best-wrapper">
+                  <span class="review-section-name"><?php the_field('review_author_name') ?></span>
+                  <div class="review-section-best-item">
+                     <img src="<?php echo get_template_directory_uri() . '/assets/images/stars-' . get_field('review_rate_stars')  . '.png' ?> " alt="Author Rank" class="review-section-best-item-stars">
 
-            <div class="review-section-best-wrapper">
-               <span class="review-section-name">Sarah</span>
-               <div class="review-section-best-item">
-                  <img src="STARS" alt="Stars" class="review-section-best-item-stars">
-                  <h3 class="review-section-best-item-title">Tons of fun for my baby</h3>
-                  <p class="review-section-best-item-text">Lovely mat. My baby has tons of fun playing with it. I wasn't expecting much for the price I paid, but after my baby playing with it almost everyday I have no regrets. I will buy couple more, just in case, since the price is so good. It would be also a perfect gift. Packed well enough to use as a gift. I just wonder why didn't they seal the box though.</p>
-               </div><!-- /.review-section-best-item -->
-            </div><!-- /.review-section-best-wrapper -->
+                     <h3 class="review-section-best-item-title"><?php echo mb_strimwidth(get_the_title(), 0, 50, '...') ?></h3>
+                     <p class="review-section-best-item-text"><?php echo mb_strimwidth(get_the_content(), 0, 500, '...') ?></p>
+                  </div><!-- /.review-section-best-item -->
 
-            <div class="review-section-best-wrapper">
-               <span class="review-section-name">Sarah</span>
-               <div class="review-section-best-item">
-                  <img src="STARS" alt="Stars" class="review-section-best-item-stars">
-                  <h3 class="review-section-best-item-title">Tons of fun for my baby</h3>
-                  <p class="review-section-best-item-text">Lovely mat. My baby has tons of fun playing with it. I wasn't expecting much for the price I paid, but after my baby playing with it almost everyday I have no regrets. I will buy couple more, just in case, since the price is so good. It would be also a perfect gift. Packed well enough to use as a gift. I just wonder why didn't they seal the box though.</p>
-               </div><!-- /.review-section-best-item -->
-            </div><!-- /.review-section-best-wrapper -->
+               </div><!-- /.review-section-best-wrapper -->
+            <?php
+                  }
+               }
+               else {
+                  echo 'Oh no! Unfortunatelly no reviews at the moment. Please add some and its will appear here!';
+               }
+            ?>
 
          </div><!-- /.review-section-text -->
 

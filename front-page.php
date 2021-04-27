@@ -183,10 +183,11 @@
          
          <div class="accordion-header"><?php the_field('question_4', 15); ?></div>
          <div class="accordion-body"><?php the_field('answer_4', 15); ?></div>
-
+         
          <div class="accordion-header"><?php the_field('question_5', 15); ?></div>
          <div class="accordion-body"><?php the_field('answer_5', 15); ?></div>
 
+         <!-- 
          <div class="accordion-header"><?php the_field('question_6', 15); ?></div>
          <div class="accordion-body"><?php the_field('answer_6', 15); ?></div>
 
@@ -201,6 +202,7 @@
 
          <div class="accordion-header"><?php the_field('question_10', 15); ?></div>
          <div class="accordion-body"><?php the_field('answer_10', 15); ?></div>
+          -->
       </div><!-- /.questions-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.questions-section -->

@@ -431,10 +431,10 @@ body {
 .accordion-header:after {
   content: "";
   position: absolute;
-  top: 32px;
+  top: 33px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 20px;
+  left: 21px;
   width: 15px;
   height: 15px;
   background: url("../images/arrow.svg") no-repeat;
@@ -446,10 +446,14 @@ body {
 }
 
 .accordion-header.active:after {
-  top: 52%;
+  top: 34px;
   left: 20px;
   -webkit-transform: translateY(-50%) rotate(0.25turn);
           transform: translateY(-50%) rotate(0.25turn);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .accordion-header:before {

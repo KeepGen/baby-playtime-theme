@@ -29,6 +29,12 @@
 
          ?>
 
+         <a href="#" class="header-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+         </a>
+
       </div>
       <!-- /.header-wrapper -->
    </div>

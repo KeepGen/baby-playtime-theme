@@ -495,3 +495,89 @@ body {
   margin: auto;
   margin-bottom: 34px;
 }
+
+.footer {
+  padding: 55px 0 30px;
+  background-color: #21a3ca;
+  color: #ffffff;
+}
+
+.footer-nav {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-nav a {
+  color: #ffffff;
+}
+
+.footer-articles-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 70px;
+}
+
+.footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  height: 32px;
+}
+
+.footer-copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #2d2d2d;
+  font-size: 20px;
+}
+
+.footer-article-title {
+  font-family: 'Quicksand-Bold', Arial, sans;
+  margin-right: 10px;
+}
+
+.footer-article-item {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-article-item:hover {
+  text-decoration: underline;
+  -webkit-transition: -webkit-transform 5.5s;
+  transition: -webkit-transform 5.5s;
+  transition: transform 5.5s;
+  transition: transform 5.5s, -webkit-transform 5.5s;
+}
+
+.footer-article-item:visited {
+  color: #ffffff;
+}

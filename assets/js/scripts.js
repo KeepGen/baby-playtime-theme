@@ -12,14 +12,10 @@ $(document).ready(function () {
 
 
   // Mobile menu
-  $('.header-menu-toggle').change(function(){
-    if($(this).is('.header-nav-desktop')){
-      $('.header-nav').addClass('.header-nav-mobile');
-      $('.header-nav').removeClass('header-nav-desktop');
-    }else{
-      $('.header-nav').removeClass('header-nav-mobile');
-      $('.header-nav').addClass('header-nav-desktop');
-    }
-  });
+  let menuToggle = $('.header-menu-toggle');
+  menuToggle.on('click', function (event) {
+    event.preventDefault();
+    $('.header-nav').slideToggle(200);
+  })
 
 });

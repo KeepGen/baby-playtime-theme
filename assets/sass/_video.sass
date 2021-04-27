@@ -8,7 +8,9 @@
       display: flex
       justify-content: space-between
    &-text
-      width: 615px
+      width: 48%
+   &-video
+      width: 48%
    &-title
       margin-top: 0
       margin-bottom: 30px
@@ -23,3 +25,33 @@
    &-leaves-img
       position: absolute
       bottom: 0
+@media screen and ( max-width: 1300px )
+   .video-section
+      background-position: 50% 125%
+      &-wrapper
+         flex-direction: column
+      &-text
+         width: 100%
+         text-align: center
+      &-description
+         margin-bottom: 25px
+      &-video
+         width: 100%
+         margin-top: 30px
+         iframe
+            width: 100%
+            height: 500px
+@media screen and ( max-width: 768px )
+   .video-section
+      &-title
+         font-size: 36px
+      &-description
+         font-size: 20px
+      &-video
+         iframe
+            height: 400px
+@media screen and ( max-width: 576px )
+   .video-section
+      &-video
+         iframe
+            height: 300px

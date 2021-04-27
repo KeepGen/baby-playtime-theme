@@ -205,6 +205,21 @@
    </div><!-- /.container -->
 </div><!-- /.questions-section -->
 
+<div class="action-section">
+   <div class="container">
+      <div class="action-section-wrapper">
+         <div class="action-section-text">
+            <h2 class="action-section-title"><?php the_field('action_title', 15) ?></h2>
+            <?php 
+            $image = get_field('action_decor', 15);
+            if( !empty( $image ) ): ?>
+               <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="decor-action action-section-decor" />
+            <?php endif; ?>
+            <button class="button button-gift"><?php the_field('gift_button_text', 15) ?></button>
+         </div><!-- /.action-section-text -->
 
+      </div><!-- /.action-section-wrapper -->
+   </div><!-- /.container -->
+</div><!-- /.action-section -->
 
 <?php get_footer(); ?>

@@ -6,7 +6,10 @@
          <div class="hero-main-texts">
             <h1 class="hero-title"><?php the_field('main_title') ?></h1>
             <span class="hero-description"><?php the_field('main_text') ?></span>
-            <button class="button button-hero"><?php the_field('main_button_text') ?></button>
+            
+            <button class="button button-hero" onclick="location.href='<?php the_field('main_button_url') ?>'" type="button">
+               <?php the_field('main_button_text') ?>
+            </button>
          </div>
 
          <?php 
@@ -14,10 +17,12 @@
          if( !empty( $image ) ): ?>
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="hero-main-img" />
          <?php endif; ?>
+         
 
       </div><!-- /.hero -->
    </div><!-- /.container -->
 </main><!-- /.front-page-header -->
+<div id="video" class="separator"></div>
 
 <div class="video-section">
    <div class="container">
@@ -35,10 +40,11 @@
          <div class="video-section-video">
             <?php the_field('video_url') ?>
          </div><!-- /.video-section-video -->
-
+      
       </div><!-- /.video-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.video-section -->
+<div id="benefits" class="separator"></div>
 
 <div class="benefits-section">
    <div class="container">
@@ -96,10 +102,11 @@
                </div><!-- /.benefits-features-item -->
             </div><!-- /.benefits-features -->
          </div><!-- /.benefits-section-text -->
-
+         
       </div><!-- /.benefits-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.benefits-section -->
+<div id="gift" class="separator"></div>
 
 <div class="gift-section">
    <div class="container">
@@ -112,7 +119,10 @@
             if( !empty( $image ) ): ?>
                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="decor-gift gift-section-decor" />
             <?php endif; ?>
-            <button class="button button-gift"><?php the_field('gift_button_text') ?></button>
+
+            <button class="button button-gift" onclick="location.href='<?php the_field('gift_button_url') ?>'" type="button">
+               <?php the_field('gift_button_text') ?>
+            </button>
          </div><!-- /.gift-section-text -->
 
          <?php 
@@ -120,10 +130,11 @@
             if( !empty( $image ) ): ?>
                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="decor-gift gift-section-image" />
          <?php endif; ?>
-
+         
       </div><!-- /.gift-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.gift-section -->
+<div id="reviews" class="separator"></div>
 
 <div class="review-section">
    <div class="container">
@@ -163,7 +174,8 @@
 
          <a href="#" class="review-section-readmore">View all reviews</a>
          <!-- /.review-section-readmore -->
-
+         
+         <div id="faq" class="separator"></div>
       </div><!-- /.review-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.review-section -->
@@ -217,7 +229,10 @@
             if( !empty( $image ) ): ?>
                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="decor-action action-section-decor" />
             <?php endif; ?>
-            <button class="button button-gift"><?php the_field('gift_button_text', 15) ?></button>
+
+            <button class="button button-gift" onclick="location.href='<?php the_field('action_button_url', 15) ?>'" type="button">
+               <?php the_field('action_button_text', 15) ?>
+            </button>
          </div><!-- /.action-section-text -->
 
       </div><!-- /.action-section-wrapper -->

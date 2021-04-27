@@ -69,11 +69,10 @@ body {
   color: #21a3ca;
   font-family: 'Quicksand-Bold', Arial, sans;
   font-size: 20px;
-  font-weight: 900;
 }
 
 .menu-item a:hover {
-  color: #19708a;
+  color: #ffac5f;
 }
 
 .container {

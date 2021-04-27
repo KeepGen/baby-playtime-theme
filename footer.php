@@ -15,7 +15,30 @@
 
          <div class="footer-articles-wrapper">
             <span class="footer-article-title"><?php the_field('footer_article_text', 15) ?></span>
-            <a href="" class="footer-article-item">5 ways to make tummy time truly special</a>
+            <?php		
+               global $post;
+
+               $query = new WP_Query( [
+                  'posts_per_page' => 5,
+               ] );
+
+               if ( $query->have_posts() ) {
+                  while ( $query->have_posts() ) {
+                     $query->the_post();
+                     ?>
+                        <a href="<?php the_permalink() ?>" class="footer-article-item">
+                           <?php the_title(); ?>
+                        </a>
+                     <?php 
+                  }
+               } else {
+                  ?>
+                  Articles are not added yet, please come back later or add some.
+                  <?php
+               }
+               wp_reset_postdata(); // Сбрасываем $post
+            ?>
+
          </div>
          <!-- /.footer-articles-wrapper -->
 

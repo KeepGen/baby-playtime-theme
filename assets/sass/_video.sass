@@ -43,15 +43,29 @@
             height: 500px
 @media screen and ( max-width: 768px )
    .video-section
+      padding-top: 40px
       &-title
-         font-size: 36px
+         font-size: 32px
+         margin-bottom: 10px
       &-description
          font-size: 20px
+         line-height: 1.5
       &-video
          iframe
             height: 400px
 @media screen and ( max-width: 576px )
    .video-section
+      &-title
+         font-size: 25px
+      &-description
+         line-height: 1.4
       &-video
          iframe
             height: 300px
+@media screen and ( max-width: 380px )
+   .video-section
+      padding-bottom: 45px
+      &-title
+         font-size: 21px
+      &-description
+         font-size: 18px

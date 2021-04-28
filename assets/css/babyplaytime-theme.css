@@ -1083,6 +1083,9 @@ body {
 }
 
 @media screen and (max-width: 400px) {
+  .action-section {
+    background-position: 50% 1050%;
+  }
   .action-section-title {
     font-size: 21px;
   }

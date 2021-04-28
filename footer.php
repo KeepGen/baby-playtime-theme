@@ -14,7 +14,7 @@
          ?>
 
          <div class="footer-articles-wrapper">
-            <span class="footer-article-title"><?php the_field('footer_article_text', 15) ?></span>
+            <!-- <span class="footer-article-title"><?php the_field('footer_article_text', 15) ?></span> -->
             <?php		
                global $post;
 

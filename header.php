@@ -9,6 +9,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+<div id="top" class="separator"></div>
 <header class="header">
    <div class="container">
       <div class="header-wrapper">

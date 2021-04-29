@@ -5,14 +5,13 @@
 .hero
    padding-top: 100px
    position: relative
-   min-height: 580px
+   min-height: 500px
    z-index: 1
    &-title
-      margin-top: 0
-      margin-bottom: 27px
+      margin: 0 0 20px 67px
       padding: 0
       font-family: 'Quicksand-Medium', Arial, sans
-      font-size: 45px
+      font-size: 24px
    &-description
       display: block
       margin: 0
@@ -20,8 +19,6 @@
       margin-right: 0
       margin-bottom: 40px
       padding: 0
-      font-size: 24px
-      line-height: 1.8
    &-main
       &-texts
          width: 645px
@@ -29,21 +26,17 @@
          margin-right: 0
       &-img
          position: absolute
-         left: 100px
+         left: 70px
          top: 0
          z-index: -1
+         width: 600px
 .button-hero
    margin-left: 220px
-@media screen and ( max-width: 1400px )
-   .hero
-      &-main
-         &-img
-            left: 0
 @media screen and ( max-width: 1300px )
    .hero
       &-main
          &-img
-            left: -50px
+            left: 0px
 @media screen and ( max-width: 1200px )
    .hero
       padding-top: 50px
@@ -54,17 +47,12 @@
          &-img
             width: 50%
             padding-bottom: 25px
-      &-title
-         font-size: 39px
-         text-align: center
       &-description
          font-size: 20px
 @media screen and ( max-width: 1100px )
    .hero
       padding-top: 50px
       min-height: 400px
-      &-title
-         font-size: 35px
    .button
       &-hero
          display: block
@@ -72,14 +60,18 @@
 @media screen and ( max-width: 906px )
    .hero
       padding-top: 0
+      &-title
+         margin-left: 0
+         text-align: center
       &-main
          &-texts
             width: 100%
-            padding-top: 730px
+            padding-top: 510px
          &-img
-            width: 100%
-            left: 0
+            width: 70%
+            left: 110px
             top: 50px
+            margin: auto
       &-description
          width: 100%
          margin: 0
@@ -87,44 +79,42 @@
    .front-page
       &-header
          padding-bottom: 50px
-@media screen and ( max-width: 820px )
-   .hero
-      &-main
-         &-texts
-            padding-top: 670px
 @media screen and ( max-width: 768px )
    .hero
       &-main
          &-img
             top: 50px
          &-texts
-            padding-top: 650px
-      &-title
-         font-size: 32px
-         margin-bottom: 10px
-      &-description
-         line-height: 1.5
-@media screen and ( max-width: 712px )
+            padding-top: 450px
+@media screen and ( max-width: 700px )
    .hero
       &-main
          &-texts
-            padding-top: 580px
+            padding-top: 410px
 @media screen and ( max-width: 600px )
    .hero
       &-main
          &-img
             top: 70px
          &-texts
-            padding-top: 550px
-@media screen and ( max-width: 550px )
+            padding-top: 400px
+@media screen and ( max-width: 576px )
    .hero
       &-main
+         &-img
+            width: 100%
+            left: 0
          &-texts
-            padding-top: 450px
+            padding-top: 500px
       &-title
          font-size: 25px
       &-description
          font-size: 18px
+@media screen and ( max-width: 500px )
+   .hero
+      &-main
+         &-texts
+            padding-top: 450px
 @media screen and ( max-width: 450px )
    .hero
       &-main
@@ -140,5 +130,12 @@
       &-main
          &-texts
             padding-top: 350px
+      &-title
+         font-size: 21px
+@media screen and ( max-width: 350px )
+   .hero
+      &-main
+         &-texts
+            padding-top: 325px
       &-title
          font-size: 21px

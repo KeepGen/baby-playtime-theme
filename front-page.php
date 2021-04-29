@@ -172,7 +172,7 @@
 
          </div><!-- /.review-section-text -->
 
-         <a href="#" class="review-section-readmore">View all reviews</a>
+         <!-- <a href="#" class="review-section-readmore">View all reviews</a> -->
          <!-- /.review-section-readmore -->
          
          <div id="faq" class="separator"></div>

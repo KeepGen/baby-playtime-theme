@@ -8,7 +8,7 @@ if ( ! function_exists('babyplaytime_theme_setup') ):
       // Adding custom logo
       add_theme_support( 'custom-logo', [
          'height'      => 59,
-         'width'       => 350,
+         'width'       => 300,
          'flex-height' => true,
          'header-text' => 'BabyPlayTime',
          'unlink-homepage-logo' => true, // WP 5.5

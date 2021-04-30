@@ -6,6 +6,11 @@
          <div class="hero-main-texts">
             <h1 class="hero-title"><?php the_field('main_title') ?></h1>
             <span class="hero-description"><?php the_field('main_text') ?></span>
+
+            <div class="hero-prices">
+               <span class="hero-old-price">$<?php the_field('main_old_price') ?></span>
+               <span class="hero-real-price">Only $<?php the_field('main_real_price') ?></span>
+            </div>
             
             <button class="button button-hero" onclick="location.href='<?php the_field('main_button_url') ?>'" type="button">
                <?php the_field('main_button_text') ?>

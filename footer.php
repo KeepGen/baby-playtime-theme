@@ -53,6 +53,13 @@
          </span><!-- /.footer-copyright -->
 
       </div><!-- /.container -->
+      
+      <a href="#top" id="totop" class="icontotop">
+         <svg width="50" height="50" fill="#fd9b03" class="logo ooter-logo-img">
+            <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#totop"></use>
+         </svg>
+      </a>
+
     </footer>
 
    <?php wp_footer(); ?>

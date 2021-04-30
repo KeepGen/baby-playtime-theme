@@ -155,6 +155,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1180px;
   width: 90%;
@@ -177,6 +181,19 @@ body {
 .button:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#fd9b03), to(#fd9b03));
   background: linear-gradient(to bottom, #fd9b03 0%, #fd9b03 100%);
+}
+
+#totop {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  right: 30px;
+}
+
+.icontotop {
+  display: block;
+  visibility: hidden;
 }
 
 .page {
@@ -205,7 +222,7 @@ body {
   margin: 0 0 20px 67px;
   padding: 0;
   font-family: 'Quicksand-Medium', Arial, sans;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .hero-description {
@@ -279,7 +296,7 @@ body {
   }
   .hero-main-texts {
     width: 100%;
-    padding-top: 510px;
+    padding-top: 530px;
   }
   .hero-main-img {
     width: 70%;
@@ -297,6 +314,18 @@ body {
   }
 }
 
+@media screen and (max-width: 860px) {
+  .hero-main-texts {
+    padding-top: 510px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .hero-main-texts {
+    padding-top: 500px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-main-img {
     top: 50px;
@@ -308,7 +337,13 @@ body {
 
 @media screen and (max-width: 700px) {
   .hero-main-texts {
-    padding-top: 410px;
+    padding-top: 430px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .hero-main-texts {
+    padding-top: 420px;
   }
 }
 
@@ -337,6 +372,12 @@ body {
   }
 }
 
+@media screen and (max-width: 530px) {
+  .hero-main-texts {
+    padding-top: 475px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .hero-main-texts {
     padding-top: 450px;
@@ -345,7 +386,7 @@ body {
 
 @media screen and (max-width: 450px) {
   .hero-main-texts {
-    padding-top: 400px;
+    padding-top: 420px;
   }
   .hero-description {
     line-height: 1.4;
@@ -355,21 +396,48 @@ body {
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 430px) {
   .hero-main-texts {
-    padding-top: 350px;
-  }
-  .hero-title {
-    font-size: 21px;
+    padding-top: 420px;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 420px) {
   .hero-main-texts {
-    padding-top: 325px;
+    padding-top: 410px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero-main-texts {
+    padding-top: 390px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .hero-main-texts {
+    padding-top: 370px;
   }
   .hero-title {
-    font-size: 21px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .hero-main-texts {
+    padding-top: 350px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .hero-main-texts {
+    padding-top: 340px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .hero-main-texts {
+    padding-top: 330px;
   }
 }
 
@@ -408,7 +476,7 @@ body {
   margin-bottom: 20px;
   padding: 0;
   font-family: 'Quicksand-Medium', Arial, sans;
-  font-size: 24px;
+  font-size: 26px;
   color: #21a2ca;
 }
 
@@ -505,7 +573,7 @@ body {
     padding-bottom: 45px;
   }
   .video-section-title {
-    font-size: 21px;
+    font-size: 22px;
   }
   .video-section-description {
     font-size: 18px;
@@ -544,7 +612,7 @@ body {
   margin: 0 0 27px 20px;
   padding: 0;
   font-family: 'Quicksand-Medium', Arial, sans;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .benefits-section-description {
@@ -685,7 +753,7 @@ body {
 
 @media screen and (max-width: 380px) {
   .benefits-section-title {
-    font-size: 21px;
+    font-size: 22px;
   }
   .benefits-section-description {
     font-size: 18px;
@@ -720,7 +788,7 @@ body {
   margin-bottom: 20px;
   padding: 0;
   font-family: 'Quicksand-Medium', Arial, sans;
-  font-size: 24px;
+  font-size: 26px;
   color: #21a2ca;
 }
 
@@ -803,7 +871,7 @@ body {
     padding-bottom: 45px;
   }
   .gift-section-title {
-    font-size: 21px;
+    font-size: 22px;
   }
 }
 
@@ -819,7 +887,7 @@ body {
   margin-bottom: 27px;
   padding: 0;
   font-family: 'Quicksand-Medium', Arial, sans;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .review-section-best {
@@ -954,7 +1022,7 @@ body {
 
 @media screen and (max-width: 380px) {
   .review-section-title {
-    font-size: 21px;
+    font-size: 22px;
   }
 }
 
@@ -965,7 +1033,7 @@ body {
 
 .questions-section-title {
   font-family: 'Quicksand-Medium', Arial, sans;
-  font-size: 24px;
+  font-size: 26px;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -1061,6 +1129,12 @@ body {
   }
 }
 
+@media screen and (max-width: 380px) {
+  .questions-section-title {
+    font-size: 22px;
+  }
+}
+
 .action-section {
   padding: 40px 0 80px;
   background: #ffffff url(../images/leaves.png) no-repeat;
@@ -1071,7 +1145,7 @@ body {
   margin-bottom: 30px;
   padding: 0;
   font-family: 'Quicksand-Medium', Arial, sans;
-  font-size: 24px;
+  font-size: 26px;
   color: #21a2ca;
   text-align: center;
 }
@@ -1091,27 +1165,24 @@ body {
 @media screen and (max-width: 700px) {
   .action-section {
     padding: 45px 0;
-    background-position: 50% -540%;
+    background-position: 50% -900%;
   }
   .action-section-title {
     margin-top: 0;
   }
 }
 
-@media screen and (max-width: 447px) {
+@media screen and (max-width: 500px) {
   .action-section {
-    background-position: 50% 610%;
+    background-position: 50% 530%;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .action-section {
-    background-position: 50% -2000%;
-  }
   .action-section-title {
     width: 60%;
     margin: auto;
-    font-size: 21px;
+    font-size: 22px;
   }
   .action-section-decor {
     margin-top: 15px;

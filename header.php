@@ -1,3 +1,5 @@
+<?php include 'utils/detect-language.php'; ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -20,14 +22,23 @@
                echo 'Baby-PlayTime';
             }
 
-            wp_nav_menu( [
-               'theme_location'  => 'header_menu',
-               'container'       => 'nav', 
-               'container_class' => 'header-nav',
-               'menu_class'      => 'header-menu',
-               'echo'            => true,
-            ] );
-
+            if ($userEs) {
+               wp_nav_menu( [
+                  'theme_location'  => 'header_es_menu',
+                  'container'       => 'nav',
+                  'container_class' => 'header-nav',
+                  'menu_class'      => 'header-menu',
+                  'echo'            => true,
+               ] );
+            } else {
+               wp_nav_menu( [
+                  'theme_location'  => 'header_menu',
+                  'container'       => 'nav',
+                  'container_class' => 'header-nav',
+                  'menu_class'      => 'header-menu',
+                  'echo'            => true,
+               ] );
+            }
          ?>
 
          <a href="#" class="header-menu-toggle">

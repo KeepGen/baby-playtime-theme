@@ -1,16 +1,28 @@
+<?php include 'utils/detect-language.php'; ?>
+
    <footer class="footer">
       <div class="container">
-        
+
          <?php dynamic_sidebar( 'sidebar-footer' ); ?>
 
          <?php
-            wp_nav_menu( [
-            'theme_location'  => 'footer_menu',
-            'container'       => 'nav',
-            'container_class' => 'footer-nav-wrapper',
-            'menu_class'      => 'footer-nav',
-            'echo'            => true,
-            ] );
+            if($userEs) {
+               wp_nav_menu( [
+                  'theme_location'  => 'footer_es_menu',
+                  'container'       => 'nav',
+                  'container_class' => 'footer-nav-wrapper',
+                  'menu_class'      => 'footer-nav',
+                  'echo'            => true,
+               ] );
+            } else {
+               wp_nav_menu( [
+                  'theme_location'  => 'footer_menu',
+                  'container'       => 'nav',
+                  'container_class' => 'footer-nav-wrapper',
+                  'menu_class'      => 'footer-nav',
+                  'echo'            => true,
+               ] );
+            }
          ?>
 
          <div class="footer-articles-wrapper">
@@ -18,9 +30,16 @@
             <?php		
                global $post;
 
-               $query = new WP_Query( [
-                  'posts_per_page' => 5,
-               ] );
+                  if($userEs) {
+                     $query = new WP_Query( [
+                        'posts_per_page' => 5,
+                        'post_type' => 'articles-es',
+                     ] );
+                  } else {
+                     $query = new WP_Query( [
+                        'posts_per_page' => 5,
+                     ] );
+                  }
 
                if ( $query->have_posts() ) {
                   while ( $query->have_posts() ) {
@@ -38,7 +57,6 @@
                }
                wp_reset_postdata(); // Сбрасываем $post
             ?>
-
          </div>
          <!-- /.footer-articles-wrapper -->
 
@@ -49,9 +67,8 @@
          </div><!-- /.footer-logo -->
 
          <span class="footer-copyright">
-            Copyright &copy; <?php echo date(' Y ') ?> &nbsp; <span class="footer-copyright-text"> <?php the_field('footer_copyright_text', 15) ?>
+            Copyright &copy; <?php echo date(' Y ') ?> &nbsp; <span class="footer-copyright-text"> <?php ($userEs) ? the_field('footer_copyright_text', 2701) : the_field('footer_copyright_text', 15); ?>
          </span><!-- /.footer-copyright -->
-
       </div><!-- /.container -->
       
       <a href="#top" id="totop" class="icontotop">
@@ -59,8 +76,7 @@
             <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/sprite.svg#totop"></use>
          </svg>
       </a>
-
-    </footer>
+   </footer>
 
    <?php wp_footer(); ?>
    </body>

@@ -11,13 +11,15 @@ if ( ! function_exists('babyplaytime_theme_setup') ):
          'width'       => 300,
          'flex-height' => true,
          'header-text' => 'BabyPlayTime',
-         'unlink-homepage-logo' => true, // WP 5.5
+         'unlink-homepage-logo' => true,
       ] );
 
       // Register navigation menu
       register_nav_menus( [
          'header_menu' => 'Header Menu',
-         'footer_menu' => 'Footer Menu'
+         'footer_menu' => 'Footer Menu',
+         'header_es_menu' => 'Header ES Menu',
+         'footer_es_menu' => 'Footer ES Menu',
       ] );
 
 
@@ -26,34 +28,58 @@ if ( ! function_exists('babyplaytime_theme_setup') ):
          register_post_type( 'review', [
             'label'  => null,
             'labels' => [
-               'name'               => 'Reviews', // основное название для типа записи
-               'singular_name'      => 'Review', // название для одной записи этого типа
-               'add_new'            => 'Add a review', // для добавления новой записи
-               'add_new_item'       => 'Add new review', // заголовка у вновь создаваемой записи в админ-панели.
-               'edit_item'          => 'Edit a review', // для редактирования типа записи
-               'new_item'           => 'New review', // текст новой записи
-               'view_item'          => 'View review', // для просмотра записи этого типа.
-               'search_items'       => 'Search reviews', // для поиска по этим типам записи
-               'not_found'          => 'Not found', // если в результате поиска ничего не было найдено
-               'not_found_in_trash' => 'Now found in trash', // если не было найдено в корзине
-               'parent_item_colon'  => '', // для родителей (у древовидных типов)
-               'menu_name'          => 'Reviews', // название меню
+               'name'               => 'Reviews',
+               'singular_name'      => 'Review',
+               'add_new'            => 'Add a review',
+               'add_new_item'       => 'Add new review',
+               'edit_item'          => 'Edit a review',
+               'new_item'           => 'New review',
+               'view_item'          => 'View review',
+               'search_items'       => 'Search reviews',
+               'not_found'          => 'Not found',
+               'not_found_in_trash' => 'Now found in trash',
+               'parent_item_colon'  => '',
+               'menu_name'          => 'Reviews',
             ],
             'description'         => 'Review section',
             'public'              => true,
-            // 'publicly_queryable'  => null, // зависит от public
-            // 'exclude_from_search' => null, // зависит от public
-            // 'show_ui'             => null, // зависит от public
-            // 'show_in_nav_menus'   => null, // зависит от public
-            'show_in_menu'        => true, // показывать ли в меню адмнки
-            // 'show_in_admin_bar'   => null, // зависит от show_in_menu
-            'show_in_rest'        => true, // добавить в REST API. C WP 4.7
-            'rest_base'           => null, // $post_type. C WP 4.7
+            'show_in_menu'        => true,
+            'show_in_rest'        => true,
+            'rest_base'           => null,
             'menu_position'       => 6,
             'menu_icon'           => 'dashicons-format-quote',
             'capability_type'     => 'post',
-            //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
-            //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+            'hierarchical'        => false,
+            'supports'            => [ 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+            'taxonomies'          => [],
+            'has_archive'         => true,
+            'rewrite'             => true,
+            'query_var'           => true,
+         ] );
+         register_post_type( 'articles-es', [
+            'label'  => null,
+            'labels' => [
+               'name'               => 'Articles',
+               'singular_name'      => 'Article',
+               'add_new'            => 'Add an article',
+               'add_new_item'       => 'Add a new article',
+               'edit_item'          => 'Edit an article',
+               'new_item'           => 'New article',
+               'view_item'          => 'View article',
+               'search_items'       => 'Search articles',
+               'not_found'          => 'Not found',
+               'not_found_in_trash' => 'Now found in trash',
+               'parent_item_colon'  => '',
+               'menu_name'          => 'ES — Articles',
+            ],
+            'description'         => 'Spanish Articles',
+            'public'              => true,
+            'show_in_menu'        => true,
+            'show_in_rest'        => true,
+            'rest_base'           => null,
+            'menu_position'       => 7,
+            'menu_icon'           => 'dashicons-format-quote',
+            'capability_type'     => 'post',
             'hierarchical'        => false,
             'supports'            => [ 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
             'taxonomies'          => [],
@@ -103,6 +129,7 @@ if ( ! function_exists('babyplaytime_theme_setup') ):
             'edit.php?post_type=page', // Pages
             'edit.php?post_type=review', // Reviews
             'edit.php', // Articles (Post)
+            'edit.php?post_type=articles-es', // Reviews
             'edit-comments.php', // Comments
             'upload.php', // Media
             'separator2', // Second separator

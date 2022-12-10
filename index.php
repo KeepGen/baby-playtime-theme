@@ -1,1 +1,5 @@
-<h1>Hello, it's Index.php!</h1>
+<?php get_header(); ?>
+
+   <h3>Please, move to our <a href="/">main page</a>.</h3>
+
+<?php get_footer(); ?>

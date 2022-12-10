@@ -139,11 +139,11 @@
 
                if ($userEs) {
                   if( !empty( $imageGiftDecorEs ) ) { ?>
-                     <img src="<?php echo esc_url($imageGiftDecorEs['url']); ?>" alt="<?php echo esc_attr($imageGiftDecorEs['alt']); ?>" class="decor-gift gift-section-image" />
+                     <img src="<?php echo esc_url($imageGiftDecorEs['url']); ?>" alt="<?php echo esc_attr($imageGiftDecorEs['alt']); ?>" class="decor-gift" />
                   <?php }
                } else {
                   if( !empty( $imageGiftDecorUs ) ) { ?>
-                     <img src="<?php echo esc_url($imageGiftDecorUs['url']); ?>" alt="<?php echo esc_attr($imageGiftDecorUs['alt']); ?>" class="decor-gift gift-section-image" />
+                     <img src="<?php echo esc_url($imageGiftDecorUs['url']); ?>" alt="<?php echo esc_attr($imageGiftDecorUs['alt']); ?>" class="decor-gift" />
                   <?php }
                }
             ?>
@@ -159,11 +159,11 @@
 
             if ($userEs) {
                if( !empty( $imageGiftEs ) ) { ?>
-                  <img src="<?php echo esc_url($imageGiftEs['url']); ?>" alt="<?php echo esc_attr($imageGiftEs['alt']); ?>" class="decor-gift gift-section-image" />
+                  <img src="<?php echo esc_url($imageGiftEs['url']); ?>" alt="<?php echo esc_attr($imageGiftEs['alt']); ?>" class="gift-section-image" />
                <?php }
             } else {
                if( !empty( $imageGiftUs ) ) { ?>
-                  <img src="<?php echo esc_url($imageGiftUs['url']); ?>" alt="<?php echo esc_attr($imageGiftUs['alt']); ?>" class="decor-gift gift-section-image" />
+                  <img src="<?php echo esc_url($imageGiftUs['url']); ?>" alt="<?php echo esc_attr($imageGiftUs['alt']); ?>" class="gift-section-image" />
                <?php }
             }
          ?>

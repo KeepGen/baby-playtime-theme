@@ -19,7 +19,7 @@
             <button class="button button-hero" onclick="location.href='<?php ($userEs) ? the_field('main_button_url', 2701) : the_field('main_button_url', 15); ?>'" type="button">
                <?php ($userEs) ? the_field('main_button_text', 2701) : the_field('main_button_text', 15); ?>
             </button>
-         </div>
+         </div><!-- ./hero-main-texts -->
 
          <?php
             $imageHeroUs = get_field('main_image', 15);
@@ -35,7 +35,6 @@
                <?php }
             }
          ?>
-
       </div><!-- /.hero -->
    </div><!-- /.container -->
 </main><!-- /.front-page-header -->
@@ -221,37 +220,126 @@
    <div class="container">
       <div class="questions-section-wrapper">
          <h2 class="questions-section-title"><?php ($userEs) ? the_field('questions_title', 2701) : the_field('questions_title', 15); ?></h2>
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_1', 2701) : the_field('question_1', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_1', 2701) : the_field('answer_1', 15); ?></div>
-         
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_2', 2701) : the_field('question_2', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_2', 2701) : the_field('answer_2', 15); ?></div>
-         
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_3', 2701) : the_field('question_3', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_3', 2701) : the_field('answer_3', 15); ?></div>
-         
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_4', 2701) : the_field('question_4', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_4', 2701) : the_field('answer_4', 15); ?></div>
-         
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_5', 2701) : the_field('question_5', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_5', 2701) : the_field('answer_5', 15); ?></div>
+         <?php if($userEs) {
+            if(get_field('question_1', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_1', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_1', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_1', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_1', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_1', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_1 -->
 
-         <!-- 
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_6', 2701) : the_field('question_6', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_6', 2701) : the_field('answer_6', 15); ?></div>
+         <?php if($userEs) {
+            if(get_field('question_2', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_2', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_2', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_2', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_2', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_2', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_2 -->
 
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_7', 2701) : the_field('question_7', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_7', 2701) : the_field('answer_7', 15); ?></div>
-         
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_8', 2701) : the_field('question_8', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_8', 2701) : the_field('answer_8', 15); ?></div>
-         
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_9', 2701) : the_field('question_9', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_9', 2701) : the_field('answer_9', 15); ?></div>
+         <?php if($userEs) {
+            if(get_field('question_3', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_3', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_3', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_3', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_3', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_3', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_3 -->
 
-         <div class="accordion-header"><?php ($userEs) ? the_field('question_10', 2701) : the_field('question_10', 15); ?></div>
-         <div class="accordion-body"><?php ($userEs) ? the_field('answer_10', 2701) : the_field('answer_10', 15); ?></div>
-         -->
+         <?php if($userEs) {
+            if(get_field('question_4', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_4', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_4', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_4', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_4', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_4', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_4 -->
+
+         <?php if($userEs) {
+            if(get_field('question_5', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_5', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_5', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_5', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_5', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_5', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_5 -->
+
+         <?php if($userEs) {
+            if(get_field('question_6', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_6', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_6', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_6', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_6', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_6', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_6 -->
+
+         <?php if($userEs) {
+            if(get_field('question_7', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_7', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_7', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_7', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_7', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_7', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_7 -->
+
+         <?php if($userEs) {
+            if(get_field('question_8', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_8', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_8', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_8', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_8', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_8', 15); ?></div>
+            <?php }
+         } ?> <!-- ./ question_8 -->
+
+         <?php if($userEs) {
+            if(get_field('question_9', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_9', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_9', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_9', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_9', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_9', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_9 -->
+
+         <?php if($userEs) {
+            if(get_field('question_10', 2701)) { ?>
+               <div class="accordion-header"><?php the_field('question_10', 2701); ?></div>
+               <div class="accordion-body"><?php the_field('answer_10', 2701); ?></div>
+            <?php }
+         } else {
+            if (get_field('question_10', 15)) { ?>
+               <div class="accordion-header"><?php the_field('question_10', 15); ?></div>
+               <div class="accordion-body"><?php the_field('answer_10', 15); ?></div>
+            <?php }
+         } ?><!-- ./ question_10 -->
+
       </div><!-- /.questions-section-wrapper -->
    </div><!-- /.container -->
 </div><!-- /.questions-section -->

@@ -11,8 +11,42 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+<script>
+   function setEspLang() {
+      let langEs = 'es';
+      let d = new Date();
+      d.setTime(d.getTime() + (1*24*60*60*1000));
+      let expires = "expires="+ d.toUTCString();
+      document.cookie = 'lang' + "=" + langEs + ";" + expires + ";path=/";
+      return location.reload();
+   }
+
+   function removeEspLang() {
+      let langEs = 'us';
+      let d = new Date();
+      d.setTime(d.getTime() + (1*24*60*60*1000));
+      let expires = "expires="+ d.toUTCString();
+      document.cookie = 'lang' + "=" + langEs + ";" + expires + ";path=/";
+      return location.reload();
+   }
+</script>
+
+
+
 <div id="top" class="separator"></div>
 <header class="header">
+   <div class="language__selector">
+      <div class="container language__container">
+         <button class="language__usa language__button" onclick="removeEspLang();">
+            <span>🇺🇸 English</span>
+         </button>
+
+         <button class="language__esp language__button" onclick="setEspLang();">
+            <span>🇪🇸 Español</span>
+         </button><br>
+      </div><!-- ./container -->
+   </div><!-- ./language__selector -->
+
    <div class="container">
       <div class="header-wrapper">
          <?php

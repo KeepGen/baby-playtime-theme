@@ -16,7 +16,7 @@
                <span class="hero-real-price"><?php echo ($userEs) ? "Solo" : "Only"; ?> $<?php ($userEs) ? the_field('main_real_price', 2701) : the_field('main_real_price', 15); ?></span>
             </div>
             
-            <button class="button button-hero" onclick="location.href='<?php ($userEs) ? the_field('main_button_url', 2701) : the_field('main_button_url', 15); ?>'" type="button">
+            <button class="button hero__button" onclick="location.href='<?php ($userEs) ? the_field('main_button_url', 2701) : the_field('main_button_url', 15); ?>'" type="button">
                <?php ($userEs) ? the_field('main_button_text', 2701) : the_field('main_button_text', 15); ?>
             </button>
          </div><!-- ./hero-main-texts -->
@@ -202,7 +202,7 @@
                   }
                }
                else {
-                  echo 'Oh no! Unfortunatelly no reviews at the moment. Please add some and its will appear here!';
+                  echo 'Oh no! Unfortunately no reviews at the moment. Please add some and its will appear here!';
                }
             ?>
 

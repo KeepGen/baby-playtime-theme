@@ -24,7 +24,7 @@ body {
 
 .header {
   background-color: #f1f6fa;
-  padding-top: 44px;
+  padding-top: 20px;
   padding-bottom: 0;
   width: 100%;
 }
@@ -63,6 +63,25 @@ body {
 
 .custom-logo-link {
   width: 300px;
+}
+
+.language__selector {
+  background-color: #f1f6fa;
+  padding: 0 0 15px 0;
+}
+.language__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.language__button {
+  border: none;
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.language__button:hover {
+  color: #21a3ca;
 }
 
 @media screen and (max-width: 1050px) {
@@ -215,9 +234,9 @@ html {
   font-size: 20px;
   color: #e33443;
 }
-
-.button-hero {
-  margin-left: 245px;
+.hero__button {
+  display: block;
+  margin: auto;
 }
 
 @media screen and (max-width: 1300px) {
@@ -239,11 +258,6 @@ html {
   }
   .hero-description {
     font-size: 20px;
-  }
-
-  .button-hero {
-    display: block;
-    margin: auto;
   }
 }
 @media screen and (max-width: 1100px) {
